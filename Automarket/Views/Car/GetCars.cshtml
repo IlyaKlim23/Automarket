@@ -1,0 +1,29 @@
+@model IEnumerable<Automarket.Domain.Models.Car>
+
+@{
+    ViewBag.Title = "cars";
+    Layout = "_Layout";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+</head>
+<body>
+
+<div style="text-align: center">
+@foreach (var car in Model)
+{
+    <div class="car">
+        <a asp-controller="Car" asp-action="GetCar" asp-route-id="@car.Id">
+            <div class="car-container">
+                <div>
+                    <h3 class="car-container-label">@car.Name</h3>
+                    <h6 class="car-container-text">@car.Model</h6>
+                    <h2 class="car-container-text">@car.Price.ToString("N0")</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+}
+</div>
+</body>

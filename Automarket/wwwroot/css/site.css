@@ -1,0 +1,59 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.car-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  transition: background-color 0.5s ease, width 0.5s ease, height 0.5s ease,
+  font-size 0.5s ease;
+  width: 1000px;
+  height: 175px;
+  border: 3px solid dimgray;
+  border-radius: 1em;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: dimgray;
+}
+
+.car-container:hover{
+  background-color: #d2d2d2;
+  font-size: 40px;
+  height: 220px;
+  width: 1200px;
+}
+
+.car-container:active{
+  background-color: #989898;
+  width: 1175px;
+}
+
+.car-container-text{
+  text-align: center
+}
